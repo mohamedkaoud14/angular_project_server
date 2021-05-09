@@ -16,6 +16,11 @@ const students = JSON.parse(
 
     fs.readFileSync('./data/students.json')
 )
+app.get('/', (req, res) => {
+
+    res.status(200).json(students)
+
+})
 
 app.get('/api/v1/students', (req, res) => {
 
